@@ -2,7 +2,7 @@
 
 A Flutter-based mobile application that uses AI and machine learning to predict power outages in real-time, providing users with personalized alerts and community-driven reporting.
 
-## 🚀 Features
+## Features
 
 ### Core Functionality
 - **AI-Powered Predictions**: Machine learning models predict power outages based on historical data and weather conditions
@@ -25,7 +25,7 @@ A Flutter-based mobile application that uses AI and machine learning to predict 
 - **Push Notifications**: Local and remote notification system
 - **Image Handling**: Profile picture upload with persistent storage
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **Flutter**: Cross-platform mobile development framework
@@ -46,9 +46,23 @@ A Flutter-based mobile application that uses AI and machine learning to predict 
 
 ## 📱 Screenshots
 
-[Add screenshots here when available]
+### App Screenshots
 
-## 🚀 Getting Started
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="assets/Screenshot_20250730-162717.jpg" alt="Screenshot 1" width="200" />
+  <img src="assets/Screenshot_20250730-162739.jpg" alt="Screenshot 2" width="200" />
+  <img src="assets/Screenshot_20250730-162746.jpg" alt="Screenshot 3" width="200" />
+  <img src="assets/Screenshot_20250730-162750.jpg" alt="Screenshot 4" width="200" />
+  <img src="assets/Screenshot_20250730-162803.jpg" alt="Screenshot 5" width="200" />
+  <img src="assets/Screenshot_20250730-174723.jpg" alt="Screenshot 6" width="200" />
+  <img src="assets/Screenshot_20250730-174726.jpg" alt="Screenshot 7" width="200" />
+  <img src="assets/Screenshot_20250730-174729.jpg" alt="Screenshot 8" width="200" />
+  <img src="assets/Screenshot_20250730-174732.jpg" alt="Screenshot 9" width="200" />
+</div>
+
+*Screenshots showing various features of the Stima Sense app including the dashboard, reports, map view, and user interface.*
+
+## Getting Started
 
 ### Prerequisites
 - Flutter SDK (3.0 or higher)
@@ -95,9 +109,6 @@ A Flutter-based mobile application that uses AI and machine learning to predict 
 4. Upload ML model to Firebase ML Model Downloader
 5. Configure Firebase Cloud Functions for automated retraining
 
-### API Keys
-- **Google Maps**: `AIzaSyBayVwzBATLSWzoZMKA9j_2smKyJVRtijQ`
-- **WeatherAPI.com**: `69e2983aee59492cb4a155107252407`
 
 ### ML Model Configuration
 - **Model Name**: `outage_model`
@@ -135,40 +146,6 @@ lib/
 │       └── app_localizations.dart   # Multi-language support
 ```
 
-## 🔐 Security
-
-### Firestore Rules
-```javascript
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    // User profiles
-    match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
-    }
-    
-    // Reports
-    match /reports/{reportId} {
-      allow read: if request.auth != null;
-      allow write: if request.auth != null;
-      
-      // Likes and comments
-      match /likes/{likeId} {
-        allow read, write: if request.auth != null;
-      }
-      match /comments/{commentId} {
-        allow read, write: if request.auth != null;
-      }
-    }
-    
-    // ML training data
-    match /ml_training_data/{docId} {
-      allow read, write: if request.auth != null;
-    }
-  }
-}
-```
-
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -177,11 +154,7 @@ service cloud.firestore {
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Flutter team for the amazing framework
 - Firebase for backend services
@@ -189,11 +162,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - WeatherAPI.com for weather data
 - Community contributors and testers
 
-## 📞 Support
+## Support
 
 For support, email support@stimasense.com or create an issue in this repository.
 
-## 🔄 Version History
+## Version History
 
 - **v1.0.0** - Initial release with core features
   - AI-powered outage predictions
