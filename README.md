@@ -44,7 +44,7 @@ A Flutter-based mobile application that uses AI and machine learning to predict 
 - **Firebase ML**: Cloud-based model hosting
 - **Automated Retraining**: Continuous model improvement system
 
-## 📱 Screenshots
+## Screenshots
 
 ### App Screenshots
 
@@ -100,7 +100,7 @@ A Flutter-based mobile application that uses AI and machine learning to predict 
    flutter run
    ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Firebase Setup
 1. Create a new Firebase project
@@ -115,7 +115,7 @@ A Flutter-based mobile application that uses AI and machine learning to predict 
 - **Input Format**: `[1, 3]` - Event Month, Event Hour, Outage Duration
 - **Output Format**: `[1, 4]` - 4 prediction classes
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 lib/
@@ -146,7 +146,7 @@ lib/
 │       └── app_localizations.dart   # Multi-language support
 ```
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
